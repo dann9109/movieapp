@@ -1,10 +1,8 @@
-
 var searchInput = $('#search-input');
 var searchBtn = $('#search-btn');
 var apiKey = '84c76c81';
 var omdbAPI = 'http://www.omdbapi.com/?i=tt3896198&apikey=84c76c81';
 var posterAPI = 'http://img.omdbapi.com/?i=tt3896198&h=600&apikey=84c76c81';
-
 
 // Function to save movie title to local storage
 function saveMovieToLocalStorage(movieTitle) {
@@ -34,16 +32,15 @@ function getMovieHistoryFromLocalStorage() {
 }
 
 // Remove the existing declaration of the searchInput variable if it exists
-
 // Get reference to the search input
-let searchInput = document.getElementById("search-input");
+var searchInput = document.getElementById("search-input");
 
 // Get reference to the search button
-const searchButton = document.getElementById("search-button");
+var searchButton = document.getElementById("search-button");
 
 // Add event listener to the search button
 searchButton.addEventListener("click", function () {
-    const movieTitle = searchInput.value;
+    var movieTitle = searchInput.value;
 
     // Save the movie title to local storage
     saveMovieToLocalStorage(movieTitle);
