@@ -1,4 +1,3 @@
-
 var searchInput = $('#search-input');
 var searchButton = $('#search-button');
 var apiKey = '84c76c81';
@@ -99,42 +98,96 @@ $(document).ready(function () {
     getMovieHistoryFromLocalStorage();
 });
 
-// Function to show the search history modal
-function showSearchHistoryModal() {
-    // Retrieve the search history from local storage
-    var movieHistory = getMovieHistoryFromLocalStorage();
+// // Function to show the search history modal
+// function showSearchHistoryModal() {
+//     // Retrieve the search history from local storage
+//     var movieHistory = getMovieHistoryFromLocalStorage();
   
-    // Get reference to the modal container
-    var modalContainer = document.getElementById("modal-container");
+//     // Get reference to the modal container
+//     var modalContainer = document.getElementById("modal-container");
   
-    // Get reference to the modal content
-    var modalContent = document.getElementById("modal-content");
+//     // Get reference to the modal content
+//     var modalContent = document.getElementById("modal-content");
   
-    // Clear the modal content
-    modalContent.innerHTML = "";
+//     // Clear the modal content
+//     modalContent.innerHTML = "";
   
-    // Create a heading for the modal
-    var heading = document.createElement("h2");
-    heading.textContent = "Search History";
+//     // Create a heading for the modal
+//     var heading = document.createElement("h2");
+//     heading.textContent = "Search History";
   
-    // Create a list to display the search history
-    var list = document.createElement("ul");
+//     // Create a list to display the search history
+//     var list = document.createElement("ul");
   
-    // Loop through the search history and create list items for each movie title
-    movieHistory.forEach(function (movieTitle) {
-      var listItem = document.createElement("li");
-      listItem.textContent = movieTitle;
-      list.appendChild(listItem);
-    });
+//     // Loop through the search history and create list items for each movie title
+//     movieHistory.forEach(function (movieTitle) {
+//       var listItem = document.createElement("li");
+//       listItem.textContent = movieTitle;
+//       list.appendChild(listItem);
+//     });
   
-    // Append the heading and list to the modal content
-    modalContent.appendChild(heading);
-    modalContent.appendChild(list);
+//     // Append the heading and list to the modal content
+//     modalContent.appendChild(heading);
+//     modalContent.appendChild(list);
   
-    // Set the display style of the modal container to "block" to make it visible
-    modalContainer.style.display = "block";
-  }
+//     // Set the display style of the modal container to "block" to make it visible
+//     modalContainer.style.display = "block";
+//   }
   
-  // Add event listener to the button in the footer
-  var searchHistoryButton = document.getElementById("search-history-button");
-  searchHistoryButton.addEventListener("click", showSearchHistoryModal);
+//   // Add event listener to the button in the footer
+//   var searchHistoryButton = document.getElementById("search-history-button");
+//   searchHistoryButton.addEventListener("click", showSearchHistoryModal);
+
+// Get the search history button element
+const searchHistoryButton = document.getElementById('popup-button');
+
+// Add a click event listener to the search history button
+searchHistoryButton.addEventListener('click', showSearchHistory);
+
+var searchHistory = JSON.parse(localStorage.getItem('searchHistory'));
+
+// Function to display the search history pop-up modal
+function showSearchHistory() {
+  // Retrieve search history data from localStorage
+  const searchHistory = JSON.parse(localStorage.getItem('searchHistory'));
+
+  // Create the modal container element
+  const modalContainer = document.createElement('div');
+  modalContainer.classList.add('modal-container');
+
+  // Create the modal content element
+  const modalContent = document.createElement('div');
+  modalContent.classList.add('modal-content');
+
+  // Create the heading element for the search history
+  const heading = document.createElement('h2');
+  heading.textContent = 'Search History';
+
+  // Create the list element for the search history
+  const searchHistoryList = document.createElement('ul');
+  searchHistoryList.id = 'search-history-list';
+
+  // Iterate over search history and create list items
+  searchHistory.forEach((item) => {
+    const listItem = document.createElement('li');
+    listItem.textContent = item;
+    searchHistoryList.appendChild(listItem);
+  });
+
+  // Append the heading and search history list to the modal content
+  modalContent.appendChild(heading);
+  modalContent.appendChild(searchHistoryList);
+
+  // Append the modal content to the modal container
+  modalContainer.appendChild(modalContent);
+
+  // Append the modal container to the body of the document
+  document.body.appendChild(modalContainer);
+
+  // Add event listener to close the modal when clicking outside of it
+  modalContainer.addEventListener('click', (event) => {
+    if (event.target === modalContainer) {
+      modalContainer.remove();
+    }
+  });
+}
