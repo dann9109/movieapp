@@ -11,7 +11,7 @@
 
 <body class="bg-dark">
     <header class="header pe-2 ps-2">
-        
+
         <div class="searchbar d-flex pt-2 pb-2 align-items-center">
             <input type="text" class="form-control me-2" id="search-input" placeholder="Enter Movie Title">
             <button class="btn btn-danger me-2" id="search-button">Search</button>
@@ -19,25 +19,29 @@
         <img class="logo p-1" src="./assets/images/logo.png" alt="">
     </header>
 
-    <main class="main d-flex flex-wrap pe-2 ps-2 pt-2 pb-2">
+    <main class="main d-flex flex-row pe-2 ps-2 pt-2 pb-2">
         <section>
             <img id="movie-poster" class="img_2" src="./assets/images/2_placeholder.png" alt="">
         </section>
 
 
-        <section class="section_2 d-flex flex-fill flex-column justify-content-center align-items-center">
-            <div class="container col-4">
-            <h2 class="words " id="movie-title">type your flick name</h2>
-            <h3 class="words " id="movie-plot">flick description</h3>
-        </div>
+        <section class="d-flex flex-fill flex-column justify-content-center align-items-center">
+            <article class="display-flex flex-column justify-content-evenly" >
+                <div class="mb-4">
+                    <h2 class="h2words" id="movie-title">type your flick name</h2>
+                </div>
+                <div class="pt-2">
+                    <p class="words" id="movie-plot">flick description</p>
+                </article>
+            </div>
         </section>
     </main>
     <section class="button">
 
     </section>
 
-    <footer class= "footer">
-        <p>&copy;2024 Rutgers Coding Bootcamp Group 2: Sean, Emily, Daniel, Connor</p>   
+    <footer class="footer p-4">
+        <p>&copy;2024 Rutgers Coding Bootcamp Group 2: Sean, Emily, Daniel, Connor</p>
     </footer>
 
 
