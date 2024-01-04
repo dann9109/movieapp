@@ -25,13 +25,27 @@ function getMovieHistoryFromLocalStorage() {
     if (typeof (Storage) !== "undefined") {
         // Retrieve movie history from local storage
         let movieHistory = JSON.parse(localStorage.getItem("movieHistory")) || [];
+        // Get reference to the search history list
+        var searchHistoryList = document.getElementById("search-history-list");
 
+        // Clear the search history list
+        searchHistoryList.innerHTML = "";
+
+        // Loop through the movie history and create list items for each movie title
+        movieHistory.forEach(function (movieTitle) {
+            // Create a new list item
+            var listItem = document.createElement("li");
+            listItem.textContent = movieTitle;
+
+            // Append the list item to the search history list
+            searchHistoryList.appendChild(listItem);
+        });
         return movieHistory;
     }
     return [];
 }
 
-// Remove the existing declaration of the searchInput variable if it exists
+
 // Get reference to the search input
 var searchInput = document.getElementById("search-input");
 
@@ -44,4 +58,9 @@ searchButton.addEventListener("click", function () {
 
     // Save the movie title to local storage
     saveMovieToLocalStorage(movieTitle);
+});
+
+// Call getMovieHistoryFromLocalStorage() when the page loads
+window.addEventListener("load", function () {
+    getMovieHistoryFromLocalStorage();
 });

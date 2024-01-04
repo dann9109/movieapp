@@ -20,17 +20,17 @@
     </style>
 </head>
 
-<body>
+<body class="bg-dark">
     <header>
         <h1 class="h1">Movie App</h1>
     </header>
     <div class="container mt-4">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center bg-dark">
             <div class="col-md-6">
-                <div class="search-container">
+                <div class="search-container bg-dark">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" id="search-input" placeholder="Enter movie title">
-                        <button class="btn btn-primary" id="search-button">Search</button>
+                        <button class="btn btn-danger" id="search-button">Search</button>
                     </div>
                 </div>
             </div>
@@ -38,8 +38,8 @@
     </div>
     <main class="main row">
         <section class="section_1 column text-center text-bg-danger">
-            <h2>Search Bar</h2>
             <h3>Search History</h3>
+            <ul id="search-history-list"></ul>
         </section>
         <section class="section_2 column text-center text-bg-warning">
             <h2>Movie Title</h2>
