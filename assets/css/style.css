@@ -20,34 +20,26 @@ body {
 }
 
 .main{
-    display: flex;
-    flex-direction: row;
     background-color: gold;
+
     
 }
 
 .placeholder{
+
   
 }
 
-.section_2{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    color: black;
-    flex: 2;
+.words{
+
 }
 
 
-img{
-    display: block;
-    margin: 0 auto;
+.img_2{
     width: 300px;
 }
 
-h2 {
-    color: white;
-}
+
 
 ul {
     color: white;
