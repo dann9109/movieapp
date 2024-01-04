@@ -98,3 +98,43 @@ searchButton.on('click', function () {
 $(document).ready(function () {
     getMovieHistoryFromLocalStorage();
 });
+
+// Function to show the search history modal
+function showSearchHistoryModal() {
+    // Retrieve the search history from local storage
+    var movieHistory = getMovieHistoryFromLocalStorage();
+  
+    // Get reference to the modal container
+    var modalContainer = document.getElementById("modal-container");
+  
+    // Get reference to the modal content
+    var modalContent = document.getElementById("modal-content");
+  
+    // Clear the modal content
+    modalContent.innerHTML = "";
+  
+    // Create a heading for the modal
+    var heading = document.createElement("h2");
+    heading.textContent = "Search History";
+  
+    // Create a list to display the search history
+    var list = document.createElement("ul");
+  
+    // Loop through the search history and create list items for each movie title
+    movieHistory.forEach(function (movieTitle) {
+      var listItem = document.createElement("li");
+      listItem.textContent = movieTitle;
+      list.appendChild(listItem);
+    });
+  
+    // Append the heading and list to the modal content
+    modalContent.appendChild(heading);
+    modalContent.appendChild(list);
+  
+    // Set the display style of the modal container to "block" to make it visible
+    modalContainer.style.display = "block";
+  }
+  
+  // Add event listener to the button in the footer
+  var searchHistoryButton = document.getElementById("search-history-button");
+  searchHistoryButton.addEventListener("click", showSearchHistoryModal);

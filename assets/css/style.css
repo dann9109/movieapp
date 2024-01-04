@@ -38,7 +38,17 @@ body {
     flex: 2;
 }
 
-  
+
+img{
+    display: block;
+    margin: 0 auto;
+    width: 300px;
 }
 
+h2 {
+    color: white;
+}
 
+ul {
+    color: white;
+}
