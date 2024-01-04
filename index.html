@@ -10,38 +10,47 @@
 </head>
 
 <body class="bg-dark">
+<<<<<<< HEAD
 
     <header class="header">
         <img class="logo p-1" src="./assets/images/logo.png" alt="">
+=======
+    <header class="header pe-2 ps-2">
+
+>>>>>>> c9817bc3adad83eea55b9cbbc6b10c0946114dc9
         <div class="searchbar d-flex pt-2 pb-2 align-items-center">
             <input type="text" class="form-control me-2" id="search-input" placeholder="Enter Movie Title">
             <button class="btn btn-danger me-2" id="search-button">Search</button>
         </div>
+        <img class="logo p-1" src="./assets/images/logo.png" alt="">
     </header>
 
-    <main class="main d-flex flex-wrap pe-2 ps-2 pt-2 pb-2">
+    <main class="main d-flex flex-row pe-2 ps-2 pt-2 pb-2">
         <section>
             <img id="movie-poster" class="img_2" src="./assets/images/2_placeholder.png" alt="">
         </section>
 
 
-        <section class="section_2 d-flex flex-fill flex-column justify-content-center align-items-center">
-            <h2 class="words " id="movie-title">Movie Title</h2>
-            <h3 class="words" id="movie-plot">Movie Description</h3>
+        <section class="d-flex flex-fill flex-column justify-content-center align-items-center">
+            <article class="display-flex flex-column justify-content-evenly" >
+                <div class="mb-4">
+                    <h2 class="h2words" id="movie-title">type your flick name</h2>
+                </div>
+                <div class="pt-2">
+                    <p class="words" id="movie-plot">flick description</p>
+                </article>
+            </div>
         </section>
     </main>
+    <section class="button">
 
-    <!-- Modal container -->
-    <div id="modal-container">
-        <!-- Modal content -->
-        <div class="modal-content" id="modal-content">
-            <!-- Heading and list for search history -->
-            <h2>Search History</h2>
-            <ul id="search-history-list"></ul>
-        </div>
-    </div>
+    </section>
 
-    <footer><button id="search-history-button">Show Search History</button> </footer>
+    <footer class="footer p-4">
+        <p>&copy;2024 Rutgers Coding Bootcamp Group 2: Sean, Emily, Daniel, Connor</p>
+    </footer>
+
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
