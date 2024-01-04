@@ -44,7 +44,7 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     background-color: rgb(0, 0, 0);
-    text-align: center;
+    justify-content: center;
 }
 
 
