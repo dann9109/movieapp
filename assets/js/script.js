@@ -70,6 +70,19 @@ searchButton.on('click', function () {
     // Fetch the movie data from the OMDB API
     fetchMovieData(movieTitle);
 });
+// Add event listener to the input field for the "keydown" event
+searchInput.on('keydown', function (event) {
+    // Check if the key pressed is the "Enter" key
+    if (event.keyCode === 13) {
+        var movieTitle = searchInput.val();
+
+        // Save the movie title to local storage
+        saveMovieToLocalStorage(movieTitle);
+
+        // Fetch the movie data from the OMDB API
+        fetchMovieData(movieTitle);
+    }
+});
 
 // Call getMovieHistoryFromLocalStorage() when the page loads
 $(document).ready(function () {
