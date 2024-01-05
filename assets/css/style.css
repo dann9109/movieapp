@@ -36,7 +36,7 @@ body {
     width: 300px;
 }
 
-.button{
+.btn{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

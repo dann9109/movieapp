@@ -11,14 +11,14 @@
 </head>
 
 <body class="bg-dark">
-    
+
     <header class="header">
         <img class="logo p-1" src="./assets/images/logo.png" alt="flim projector">
         <div class="searchbar d-flex pt-2 pb-2 align-items-center">
             <input type="text" class="form-control me-2" id="search-input" placeholder="Enter Movie Title">
             <button class="btn btn-danger me-2" id="search-button">Search</button>
 
-            <button onclick="showSearchHistory()" data-bs-toggle="modal" data-bs-target="#modal">Search history</button>
+
         </div>
         <img class="logo p-1" src="./assets/images/logo.png" alt="flim projector">
     </header>
@@ -30,23 +30,24 @@
 
 
         <section class="d-flex flex-fill flex-column justify-content-center align-items-center">
-            <article class="display-flex flex-column justify-content-evenly" >
+            <article class="display-flex flex-column justify-content-evenly">
                 <div class="mb-4">
                     <h2 class="h2words" id="movie-title">type your flick name</h2>
                 </div>
                 <div class="pt-2">
                     <p class="pwords" id="movie-plot">flick description</p>
-                </article>
+            </article>
             </div>
         </section>
     </main>
+    <section>
+        <button onclick="showSearchHistory()" data-bs-toggle="modal" data-bs-target="#modal">Search history</button>
 
+    </section>
 
     <footer class="footer p-2">
         <p>&copy;2024 Rutgers Coding Bootcamp Group 2: Sean, Emily, Daniel, Connor</p>
     </footer>
-
-
     <div id="modal" class="modal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -63,6 +64,11 @@
             </div>
         </div>
     </div>
+
+
+
+
+
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
