@@ -24,8 +24,11 @@ body {
 }
 
 .h2words{
-    font-size: 150%;
+    font-size: 200%;
+}
 
+.pwords{
+    font-size: 150%;
 }
 
 
@@ -38,7 +41,7 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     background-color: rgb(0, 0, 0);
-    justify-content: center;
+    color: rgb(204, 32, 32);
 }
 
 
@@ -49,6 +52,7 @@ body {
     background-color: black;
     text-align: center;
     color: red;
+    font-size: 100%;
 }
 
 
