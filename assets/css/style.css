@@ -49,11 +49,15 @@ body {
     flex-wrap: wrap;
     background-color: black;
     text-align: center;
-    color: red;
+    color: white;
     font-size: 100%;
 }
 
 
 ul {
     color: white;
+}
+
+input::placeholder {
+    font-style: italic;
 }
