@@ -40,7 +40,7 @@ Throughout the project, the team had the opportunity to learn from each other, s
 ## Directions for Future Development
 Incorporate a Genre finder 
 Incorporate a favorites selection so that the user can create favorite movie list to watch 
-Incorporate option to create an account 
+Incorporate option to create an account
 
 [Flick Finder link] (https://dann9109.github.io/movieapp/
 )
