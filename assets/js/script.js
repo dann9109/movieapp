@@ -29,7 +29,7 @@ function getMovieHistoryFromLocalStorage() {
 // Function to fetch movie data from the OMDB API
 function fetchMovieData(movieTitle) {
     // Construct the URL for the OMDB API
-    var apiUrl = `http://www.omdbapi.com/?t=${movieTitle}&apikey=${apiKey}`;
+    var apiUrl = `https://www.omdbapi.com/?t=${movieTitle}&apikey=${apiKey}`;
 
     // Make a GET request to the OMDB API
     fetch(apiUrl)
